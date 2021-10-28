@@ -6,6 +6,7 @@ const app = Vue.createApp({
     // first create function, and return data from that function
     data() {
         return {
+            url: "http://www.thenetninja.co.uk",
             showBooks: true,
             // title: 'The Final Empire',
             // author: 'Brandon Sanderson',
