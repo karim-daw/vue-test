@@ -24,11 +24,14 @@
 
     <div id="app">
         <! -- attribute binding -->
-        <'a v-bind:href="url">best website ever</a>'
+        <! -- short cut for v-bind:href is :href -->
+        <a v-bind:href="url">best website ever</a>
+
         <div v-if="showBooks">
 
             <ul>
                 <li v-for="book in books">
+                    <img v-bind:src="book.img" v-bind:alt="book.title">
                     <h3>{{ book.title }}</h3>
                     <p>{{ book.author }}</p>
                 </li>
