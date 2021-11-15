@@ -49,16 +49,18 @@
     <div id="app">
         <! -- attribute binding -->
         <! -- short cut for v-bind:href is :href -->
+
         <a v-bind:href="url">best website ever</a>
 
         <div v-if="showBooks">
 
             <ul>
+                <!-- here im using the computed property of books called filteredBooks -->
                 <li
-                v-for="book in books" 
+                v-for="book in filteredBooks" 
                 @click="toggleFav(book)"
                 v-bind:class="{ fav: book.isFav }" >
-                
+
                     <img v-bind:src="book.img" v-bind:alt="book.title">
                     
                     <h3>{{ book.title }}</h3>
